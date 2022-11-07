@@ -1,0 +1,30 @@
+﻿#shading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#shading > .modal {
+    width: 500px;
+    background-color: whitesmoke;
+}
+
+#shading > .modal > .modal-action {
+    padding: 20px;
+    text-align: right;
+}
+
+#shading > .modal > .modal-main {
+    padding: 20px;
+}
+
+button {
+    cursor: pointer;
+}
