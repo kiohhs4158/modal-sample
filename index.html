@@ -9,26 +9,39 @@
 </head>
 <body>
 <div id="shading">
-    <div class="modal">
-        <div class="modal-main">
-            データとかボタンとか入る
-        </div>
-        <hr>
-        <div class="modal-action">
-            <button type="button" id="close-btn">モーダルを閉じる</button>
+    <div class="wrapper">
+        <div class="modal">
+            <div class="modal-main">
+                データとかボタンとか入る
+            </div>
+            <hr>
+            <div class="modal-action">
+                <button type="button" id="close-btn">モーダルを閉じる</button>
+            </div>
         </div>
     </div>
 </div>
 <button type="button" id="open-btn">モーダル開く</button>
+<!--<script>-->
+<!--    const shading = document.getElementById('shading');-->
+<!--    const openBtn = document.getElementById('open-btn');-->
+<!--    const closeBtn = document.getElementById('close-btn');-->
+<!--    openBtn.addEventListener('click', () => {-->
+<!--        shading.style.display = 'flex';-->
+<!--    });-->
+<!--    closeBtn.addEventListener('click', () => {-->
+<!--        shading.style.display = 'none';-->
+<!--    });-->
+<!--</script>-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
-    const shading = document.getElementById('shading');
-    const openBtn = document.getElementById('open-btn');
-    const closeBtn = document.getElementById('close-btn');
-    openBtn.addEventListener('click', () => {
-        shading.style.display = 'flex';
-    });
-    closeBtn.addEventListener('click', () => {
-        shading.style.display = 'none';
+    $(document).ready(function () {
+        $('#open-btn').on('click', function () {
+            $('#shading').show();
+        });
+        $('#close-btn').on('click', function () {
+            $('#shading').hide();
+        })
     });
 </script>
 </body>
